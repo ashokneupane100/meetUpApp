@@ -6,7 +6,7 @@ import { Text, View,Image } from 'react-native';
 export default function Home() {
   return (
     <>
-      <Stack.Screen options={{ title: 'Events' }} />
+      <Stack.Screen />
       <Text>Wed 13, Sep · 1930 CET  </Text>
       {/* <Text style={{fontSize:30,fontWeight:"bold"}}>This is the title</Text> */}
 
