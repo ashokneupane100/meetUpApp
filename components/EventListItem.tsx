@@ -75,3 +75,12 @@ export default function EventListItem({event}) {
     </Pressable>
   );
 }
+
+// EventListItem.defaultProps = {
+//   event: {
+//     title: "Event Title",
+//     datetime: "Today at 7:00 PM",
+//     location: "123 Main St, Anytown, USA",
+//     image: "https://via.placeholder.com/150",
+//   },
+// };
