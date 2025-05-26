@@ -2,7 +2,12 @@ import Feather from "@expo/vector-icons/Feather";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Text, View, Image, Pressable } from "react-native";
 
-export default function EventListItem() {
+
+
+
+export default function EventListItem({event}) {
+
+
   return (
     <Pressable className="rounded-xl bg-white p-5 shadow-sm border border-gray-100">
       
@@ -14,7 +19,7 @@ export default function EventListItem() {
           {/* Date & Time */}
           <View className="mb-3">
             <Text className="text-sm font-medium text-blue-600 uppercase tracking-wide">
-              Wed 13, Sep · 19:30 CET
+             {event.datetime}
             </Text>
           </View>
           
@@ -23,13 +28,13 @@ export default function EventListItem() {
             className="text-xl font-bold text-gray-900 leading-6 mb-2" 
             numberOfLines={3}
           >
-            React Native Workshop: Building Modern Mobile Apps
+            {event?.title}
           </Text>
           
           {/* Location */}
           <View className="flex-row items-center mb-3">
             <Feather name="map-pin" size={14} color="#6B7280" />
-            <Text className="text-gray-600 ml-1 font-medium">City Hall, Barcelona</Text>
+            <Text className="text-gray-600 ml-1 font-medium">{event.location}</Text>
           </View>
         </View>
         
@@ -37,7 +42,7 @@ export default function EventListItem() {
         <View className="w-24 h-24">
           <Image
             source={{ 
-              uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg' 
+              uri:event.image
             }}
             className="w-full h-full rounded-lg"
             resizeMode="cover"

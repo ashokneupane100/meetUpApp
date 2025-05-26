@@ -3,11 +3,9 @@
   "compilerOptions": {
     "strict": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": ".", // Base directory for resolving non-relative module names
     "paths": {
-      "~/*": [
-        "*"
-      ]
+      "@/*": ["./*"] // Map @/ to the root directory (./)
     }
   },
   "include": [
