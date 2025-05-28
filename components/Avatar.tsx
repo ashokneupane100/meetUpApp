@@ -1,4 +1,3 @@
-import * as ImagePicker from 'expo-image-picker';
 import { useState, useEffect } from 'react';
 import { StyleSheet, View, Alert, Image, Button } from 'react-native';
 
