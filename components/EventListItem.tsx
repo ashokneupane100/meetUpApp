@@ -36,7 +36,7 @@ export default function EventListItem({ event }) {
           <View className="h-24 w-24">
             <Image
               source={{
-                uri: event.image,
+                uri: event.image || 'https://via.placeholder.com/150',
               }}
               className="h-full w-full rounded-lg"
               resizeMode="cover"
@@ -52,7 +52,9 @@ export default function EventListItem({ event }) {
           {/* Attendees */}
           <View className="flex-row items-center">
             <View className="mr-2 h-2 w-2 rounded-full bg-green-500" />
-            <Text className="font-medium text-gray-700">16 going</Text>
+            <Text className="font-medium text-gray-700">
+              {event.attendees_count || 0} going
+            </Text>
           </View>
 
           {/* Action Buttons */}
