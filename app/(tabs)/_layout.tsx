@@ -20,7 +20,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Event',
-          headerTitle: 'Event Tracker By Ashok Neupane',
+          headerTitle: 'Meet Up App By Ashok Neupane',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
